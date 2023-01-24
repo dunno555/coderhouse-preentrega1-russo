@@ -36,19 +36,13 @@ for (let i = 1; i >= 0; i--) {
     if (validation.toLowerCase() == 'invalid')  {
         alert('Sorry, but the only valid answers are 1, 2, 3, or 4. Try again.');
         i++;
-    };
-
-    if (answer == '3') {
+    } else if (answer == '3') {
         alert(`Correct! For more info on Pandemic, check out its profile on BGG:\n${pandemicBGGLink}`);
         break;
-    };
-
-    if (i == 0) {
+    } else if (i == 0) {
         alert(`Sorry! The correct answer is 3. Pandemic. Better luck next time!\n\nFor more info on Pandemic, check out its profile on BGG: ${pandemicBGGLink}`);
         break;
     };
-
-    // I don't really like this verification. I need to find something simpler for this
 
     if (validButIncorrectOptions.includes(answer)) {
         alert(`Sorry, that is not the correct answer. You have ${i} chance left. Try again!`);
